@@ -2,9 +2,8 @@
 {% block title %}Blog{% endblock %}
 {% block content %}
 
-
 <ul>
-   {% for object in object_list %}
+   {% for object in object_category %}
       <li>
          <p class="h1">{{object.title}}</p>
          <p class="fs-4">{{object.content}}</p>
