@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block title %}{{ task.title }} | {{ block.super }}{% endblock %}
+{% block title %}Blog{% endblock %}
 {% block content %}
 
-<h2>{{ task.title }}</h2>
-<label for="completed">Completed</label>
-{% if task.completed %}
-    <input id="completed" type="checkbox" checked value="Completed">
-{% else %}
-    <input id="uncompleted" type="checkbox" value="Completed">
-{% endif %}
+<div>
+    <p class="h1">{{object.title}}</p>
+    <p class="fs-4">{{object.content}}</p>
+    <p class="fs-4">{{object.created}}</p>
+    <p class="fs-4">{{object.updated}}</p>
+</div>
+
 {% endblock %}
